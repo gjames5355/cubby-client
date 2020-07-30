@@ -1,0 +1,387 @@
+/***********************************************
+  Global heights
+************************************************/
+
+#root {
+  height: 100vh;
+}
+
+.App__main,
+.App__main section {
+  height: 100%;
+}
+
+/***********************************************
+  App (all first child sections)
+************************************************/
+
+.App__main section {
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+
+/***********************************************
+  AppNav
+************************************************/
+
+.AppNav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.625rem;
+  background: linear-gradient(90deg, #cf70f6 0%, #2a67c9 100%);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.125);
+}
+
+.AppNav__section {
+  display: flex;
+  align-items: center;
+}
+
+.AppNav__item {
+  white-space: nowrap;
+}
+
+.AppNav__item + .AppNav__item {
+  margin-left: 0.4rem;
+  color: white;
+}
+
+.AppNav__item a,
+.AppNav__username {
+  color: beige;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
+}
+
+.AppNav__logo {
+  width: 8rem;
+  -webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 96, 0.4));
+  filter: drop-shadow(0 0 4px rgba(0, 0, 96, 0.4));
+  margin: 0.65rem 0;
+}
+
+/***********************************************
+  AppLanding
+************************************************/
+
+.AppLanding > header {
+  margin-bottom: 1rem;
+}
+
+.AppLanding__demo-button > button {
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.AppLanding__features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.AppLanding__features__text {
+  position: relative;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 2.5rem 1rem 1.25rem 1rem;
+}
+
+.AppLanding__features__text--emphasis {
+  font-size: 120%;
+}
+
+/**************** Image positioning ****************/
+
+.AppLanding__features:nth-child(2) > img {
+  max-width: 100vw;
+}
+
+.AppLanding__features:nth-child(2) .AppLanding__features__text {
+  margin-top: 1rem;
+}
+
+/*************** Features top border ***************/
+
+.AppLanding__features:nth-child(3)::after,
+.AppLanding__features:nth-child(4)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+  height: 1px;
+  width: 50%;
+}
+
+/************* yabai-badge positioning *************/
+
+.AppLanding__features__text .yabai-badge {
+  font-size: 83%;
+  top: -2.25rem;
+}
+
+.AppLanding__features:nth-child(even) .yabai-badge {
+  left: -1.4rem;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+
+.AppLanding__features:nth-child(odd) .yabai-badge {
+  right: -1.4rem;
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+/***********************************************
+  Misc
+************************************************/
+
+.yabai-badge {
+  position: absolute;
+  font-family: 'Sawarabi Gothic', sans-serif;
+  font-weight: bolder;
+  color: beige;
+  background-color: rgb(255, 64, 64);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  padding: 0.2rem 0.2rem 0.2rem 0.4rem;
+}
+
+.react-numeric-input {
+  width: 100%;
+}
+
+/***********************************************
+  Custom Form
+************************************************/
+
+.custom-form {
+  padding: 1rem;
+}
+
+.custom-form__buttons-container {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.custom-form__buttons-container button {
+  width: 100%;
+  padding: 0.75rem;
+}
+
+.custom-form__input-container {
+  margin-bottom: 0.5rem;
+}
+
+.custom-form__buttons-container,
+.custom-form__input-container {
+  font-size: 1.2rem;
+}
+
+.custom-form__input,
+.custom-form__input--expiration-date,
+.custom-select-wrapper select { /* include custom-select */
+  border: 1px solid lightgray;
+  border-radius: 0.25em;
+}
+
+.custom-form__input,
+.custom-form__input--expiration-date {
+  line-height: 1.85;
+  padding: 0.35rem 0.7rem;
+  width: 100%;
+}
+
+.custom-form__input,
+.custom-select-wrapper select { /* include custom-select */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+/***************** Date Picker *****************/
+
+.custom-form__input--expiration-date {
+  -webkit-appearance: none;
+  background-color: white;
+  min-height: 3rem;
+}
+
+.custom-form__input--expiration-date::-webkit-inner-spin-button { 
+  display: none;
+}
+
+.custom-form__input--expiration-date::-webkit-calendar-picker-indicator { 
+  background-color: white;
+  color: black;
+}
+
+/************** Edit Item Details **************/
+
+.custom-form__button--edit-toggle,
+.custom-form__button--edit-text {
+  background-color: beige;
+  color: black;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  border-bottom: 1px dotted currentColor;
+  display: inline-block;
+  line-height: 0.85;
+}
+
+.custom-form__button--edit-text {
+  cursor: text;
+}
+
+.custom-form__button--edit-toggle:hover,
+.custom-form__button--edit-toggle:active,
+.custom-form__button--edit-text:hover,
+.custom-form__button--edit-text:active {
+  box-shadow: none;
+}
+
+/**** Edit Item Details (specificity fixes) ****/
+
+.ItemDetail #item_name {
+  text-align: center;
+  padding: 0;
+}
+
+.ItemDetail .ProgressBar {
+  min-height: 3rem;
+}
+
+.ItemDetail .custom-form__input-container {
+  margin-bottom: 1rem;
+}
+
+/***********************************************
+  Custom Select
+************************************************/
+
+.custom-select-wrapper {
+  position: relative;
+  margin: 1rem 0;
+  width: 14rem;
+}
+
+.custom-select-wrapper select {
+  background-color: rgb(250, 250, 250);
+  color: #363636;
+  line-height: 1.3;
+  padding: 0.5rem 0 0.5rem 4.5rem;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.custom-select-wrapper label {
+  position: absolute;
+  left: 0.85rem;
+  top: 0.45rem;
+  color: #777;
+}
+
+.custom-select-wrapper__arrow::after {
+  right: 1rem;
+  top: 25%;
+  border: 3px solid #3273dc;
+  border-radius: 2px;
+  border-right: 0;
+  border-top: 0;
+  content: ' ';
+  height: 0.75rem;
+  width: 0.75rem;
+  position: absolute;
+  pointer-events: none;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.custom-select-wrapper select:hover,
+.custom-select-wrapper select:active {
+  border-color: darkgray;
+}
+
+.custom-select-wrapper__arrow:hover:after {
+  border-color: #363636;
+}
+
+/***********************************************
+  Call to action
+************************************************/
+
+.call-to-action--green {
+  background-color: #bff199;
+}
+
+.call-to-action--red {
+  background-color: #f7c8c9;
+}
+
+.call-to-action--gray {
+  background-color: rgb(250, 250, 250);
+}
+
+.call-to-action--themed {
+  background: linear-gradient(45deg, #cf70f6 0%, #cf70f6 30%, #755dfa 100%);
+  color: beige;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 0 4px;
+}
+
+/***********************************************
+  Media Queries
+************************************************/
+
+@media screen and (min-width: 320px) {
+  .App__main section {
+    max-width: 90%;
+  }
+}
+
+/* specific fix: keep sentence on one line */
+@media screen and (max-width: 339px) {
+  .AppLanding__features__text--emphasis {
+    font-size: 112%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 150%;
+  }
+
+  .App__main section {
+    max-width: 30rem;
+  }
+
+  .AppLanding__features__text {
+    margin: 2.5rem 0.2rem 1.25rem 0.2rem;
+  }
+}
+
+/* specific fix: give yabai-badge ample spacing from viewport edge */
+@media only screen and (width: 768px) {
+  .AppLanding__features:nth-child(even) .yabai-badge {
+    left: -0.6rem;
+  }
+
+  .AppLanding__features:nth-child(odd) .yabai-badge {
+    right: -0.6rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .App__main section {
+    max-width: 40rem;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .AppLanding__features:nth-child(2) > img {
+    max-width: 43.5vw;
+  }
+}

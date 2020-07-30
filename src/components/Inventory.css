@@ -1,0 +1,32 @@
+.Inventory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Inventory__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Inventory__add-button {
+  margin: 3px 0.75rem;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Inventory__list {
+  width: 100%;
+}
+
+.Inventory__empty {
+  margin: 1rem 0;
+  color: #777;
+}
