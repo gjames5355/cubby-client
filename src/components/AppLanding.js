@@ -24,14 +24,23 @@ class AppLanding extends Component {
         <div className='AppLanding__features'>
           <img src={Landing_01} alt='Getsu Feature 1' />
           <div className='AppLanding__features__text'>
-            <div className='yabai-badge'>🐻🐻</div>
+            <div className='yabai-badge'>
+              {' '}
+              <span role='img' aria-label='emoji'>
+                🐻🐻
+              </span>
+            </div>
             Cubby is a household inventory tracker that provides you with a way
             to catalog and view any consumable items of your choosing.
           </div>
         </div>
         <div className='AppLanding__features'>
           <div className='AppLanding__features__text'>
-            <div className='yabai-badge'>🐻🐻</div>
+            <div className='yabai-badge'>
+              <span role='img' aria-label='emoji'>
+                🐻🐻
+              </span>
+            </div>
             <div className='AppLanding__features__text--emphasis'>
               Simplify your shopping lists!
             </div>{' '}
@@ -40,7 +49,11 @@ class AppLanding extends Component {
         </div>
         <div className='AppLanding__features'>
           <div className='AppLanding__features__text'>
-            <div className='yabai-badge'>🐻🐻</div>
+            <div className='yabai-badge'>
+              <span role='img' aria-label='emoji'>
+                🐻🐻
+              </span>
+            </div>
             <div className='AppLanding__features__text--emphasis'>
               Never let food go bad again!
             </div>{' '}
