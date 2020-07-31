@@ -13,7 +13,7 @@ class AppLanding extends Component {
 
   render() {
     const LandingPage = (
-      <section className="AppLanding">
+      <section className='AppLanding'>
         <header>
           <h1>
             Easily track your
@@ -21,42 +21,42 @@ class AppLanding extends Component {
             inventory with Cubby.
           </h1>
         </header>
-        <div className="AppLanding__features">
-          <img src={Landing_01} alt="Getsu Feature 1" />
-          <div className="AppLanding__features__text">
-            <div className="yabai-badge">やばい！</div>
-            Cubby is a household inventory tracker that provides you with a way to catalog
-            and view any consumable items of your choosing.
+        <div className='AppLanding__features'>
+          <img src={Landing_01} alt='Getsu Feature 1' />
+          <div className='AppLanding__features__text'>
+            <div className='yabai-badge'>🐻🐻</div>
+            Cubby is a household inventory tracker that provides you with a way
+            to catalog and view any consumable items of your choosing.
           </div>
         </div>
-        <div className="AppLanding__features">
-          <div className="AppLanding__features__text">
-            <div className="yabai-badge">やばい！</div>
-            <div className="AppLanding__features__text--emphasis">
+        <div className='AppLanding__features'>
+          <div className='AppLanding__features__text'>
+            <div className='yabai-badge'>🐻🐻</div>
+            <div className='AppLanding__features__text--emphasis'>
               Simplify your shopping lists!
             </div>{' '}
             Progress bars show at a glance how much of an item is left.
           </div>
         </div>
-        <div className="AppLanding__features">
-          <div className="AppLanding__features__text">
-            <div className="yabai-badge">やばい！</div>
-            <div className="AppLanding__features__text--emphasis">
+        <div className='AppLanding__features'>
+          <div className='AppLanding__features__text'>
+            <div className='yabai-badge'>🐻🐻</div>
+            <div className='AppLanding__features__text--emphasis'>
               Never let food go bad again!
             </div>{' '}
-            Set an item's expiration date and its progress bar will change colors based on
-            how close it is to expiring.
+            Set an item's expiration date and its progress bar will change
+            colors based on how close it is to expiring.
           </div>
         </div>
-        <div className="AppLanding__demo-button">
+        <div className='AppLanding__demo-button'>
           <button
-            type="button"
-            className="call-to-action--themed"
+            type='button'
+            className='call-to-action--themed'
             onClick={() => {
               this.context.setIsDemo(true);
               this.props.history.push('/demo');
             }}
-            aria-label="Try Demo"
+            aria-label='Try Demo'
           >
             Try Demo
           </button>
@@ -67,14 +67,14 @@ class AppLanding extends Component {
     return (
       <>
         <AppNav />
-        <main className="App__main">
+        <main className='App__main'>
           <Switch>
-            <Route exact path="/" render={() => LandingPage} />
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Registration} />
-            <Route path="/demo" component={AppDemo} />
-            <Route path="/item" render={() => <Redirect to={'/'} />} />
-            <Route path="/add-item" render={() => <Redirect to={'/'} />} />
+            <Route exact path='/' render={() => LandingPage} />
+            <Route path='/login' component={Login} />
+            <Route path='/register' component={Registration} />
+            <Route path='/demo' component={AppDemo} />
+            <Route path='/item' render={() => <Redirect to={'/'} />} />
+            <Route path='/add-item' render={() => <Redirect to={'/'} />} />
             <Route component={NotFound} />
           </Switch>
         </main>

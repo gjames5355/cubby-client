@@ -41,7 +41,7 @@
   white-space: nowrap;
 }
 
-.AppNav__item + .AppNav__item {
+.AppNav__item+.AppNav__item {
   margin-left: 0.4rem;
   color: white;
 }
@@ -53,7 +53,7 @@
 }
 
 .AppNav__logo {
-  width: 8rem;
+  width: 4rem;
   -webkit-filter: drop-shadow(0 0 4px rgba(0, 0, 96, 0.4));
   filter: drop-shadow(0 0 4px rgba(0, 0, 96, 0.4));
   margin: 0.65rem 0;
@@ -63,11 +63,11 @@
   AppLanding
 ************************************************/
 
-.AppLanding > header {
+.AppLanding>header {
   margin-bottom: 1rem;
 }
 
-.AppLanding__demo-button > button {
+.AppLanding__demo-button>button {
   font-size: 1.2rem;
   width: 100%;
   padding: 0.75rem;
@@ -96,7 +96,7 @@
 
 /**************** Image positioning ****************/
 
-.AppLanding__features:nth-child(2) > img {
+.AppLanding__features:nth-child(2)>img {
   max-width: 100vw;
 }
 
@@ -149,6 +149,11 @@
   padding: 0.2rem 0.2rem 0.2rem 0.4rem;
 }
 
+.cubby_logo {
+  border-radius: 10%;
+  ;
+}
+
 .react-numeric-input {
   width: 100%;
 }
@@ -182,7 +187,8 @@
 
 .custom-form__input,
 .custom-form__input--expiration-date,
-.custom-select-wrapper select { /* include custom-select */
+.custom-select-wrapper select {
+  /* include custom-select */
   border: 1px solid lightgray;
   border-radius: 0.25em;
 }
@@ -195,7 +201,8 @@
 }
 
 .custom-form__input,
-.custom-select-wrapper select { /* include custom-select */
+.custom-select-wrapper select {
+  /* include custom-select */
   -moz-appearance: none;
   -webkit-appearance: none;
 }
@@ -208,11 +215,11 @@
   min-height: 3rem;
 }
 
-.custom-form__input--expiration-date::-webkit-inner-spin-button { 
+.custom-form__input--expiration-date::-webkit-inner-spin-button {
   display: none;
 }
 
-.custom-form__input--expiration-date::-webkit-calendar-picker-indicator { 
+.custom-form__input--expiration-date::-webkit-calendar-picker-indicator {
   background-color: white;
   color: black;
 }
@@ -381,7 +388,7 @@
 }
 
 @media screen and (min-width: 1366px) {
-  .AppLanding__features:nth-child(2) > img {
+  .AppLanding__features:nth-child(2)>img {
     max-width: 43.5vw;
   }
 }

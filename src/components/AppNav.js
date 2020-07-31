@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import CubbyContext from '../CubbyContext';
 import TokenService from '../services/token-service';
-import GetsuLogo from '../assets/GetsuLogo.svg';
+import CubbyLogo from '../assets/CubbyLogo.png';
 
 class AppNav extends Component {
   static contextType = CubbyContext;
@@ -11,10 +11,10 @@ class AppNav extends Component {
     let content;
     if (this.context.isDemo) {
       content = (
-        <div className="AppNav__section">
-          <div className="AppNav__item">
+        <div className='AppNav__section'>
+          <div className='AppNav__item'>
             <Link
-              to="/"
+              to='/'
               onClick={() => {
                 this.context.setIsDemo(false);
               }}
@@ -26,28 +26,28 @@ class AppNav extends Component {
       );
     } else if (!this.context.hasAuthToken()) {
       content = (
-        <div className="AppNav__section">
-          <div className="AppNav__item">
-            <Link to="/login">Log in</Link>
+        <div className='AppNav__section'>
+          <div className='AppNav__item'>
+            <Link to='/login'>Log in</Link>
           </div>
-          <div className="AppNav__item">|</div>
-          <div className="AppNav__item">
-            <Link to="/register">Register</Link>
+          <div className='AppNav__item'>|</div>
+          <div className='AppNav__item'>
+            <Link to='/register'>Register</Link>
           </div>
         </div>
       );
     } else {
       content = (
-        <div className="AppNav__section">
-          <div className="AppNav__item AppNav__username">
-            <Link to="/">{TokenService.getCurrentUserName()}</Link>
+        <div className='AppNav__section'>
+          <div className='AppNav__item AppNav__username'>
+            <Link to='/'>{TokenService.getCurrentUserName()}</Link>
           </div>
-          <div className="AppNav__item">
-            <i className="fas fa-caret-right"></i>
+          <div className='AppNav__item'>
+            <i className='fas fa-caret-right'></i>
           </div>
-          <div className="AppNav__item">
+          <div className='AppNav__item'>
             <Link
-              to="/"
+              to='/'
               onClick={() => {
                 TokenService.clearCurrentUserName();
                 TokenService.clearAuthToken();
@@ -64,16 +64,16 @@ class AppNav extends Component {
     }
 
     return (
-      <nav className="AppNav">
-        <div className="AppNav__section">
+      <nav className='AppNav'>
+        <div className='AppNav__section'>
           <Link
-            to="/"
+            to='/'
             onClick={() => {
               this.context.setIsDemo(false);
             }}
           >
-            <div className="AppNav__logo">
-              <img src={GetsuLogo} alt="Getsu Logo" />
+            <div className='AppNav__logo'>
+              <img src={CubbyLogo} alt='Cubby Logo' className='cubby_logo' />
             </div>
           </Link>
         </div>
