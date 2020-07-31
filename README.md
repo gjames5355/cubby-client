@@ -2,7 +2,7 @@
 
 **Cubby is a household inventory tracker.**
 
-- [Link to live app](https://cubby.gjames5355.vercel.app/)
+- [Link to live app](https://cubby-drab.vercel.app/)
 - [Link to server code]()
 
 ![](src/assets/cubby-desktop.png)
